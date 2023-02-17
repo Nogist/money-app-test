@@ -1,8 +1,15 @@
 import React from 'react'
+import Form from '../../components/Form';
+import Content from './Content';
+import './signin.scss';
 
-const SignIn = () => {
+
+const SignIn:React.FC = () => {
   return (
-    <div>SignIn</div>
+    <div className='signin'>
+      <Content />
+      <Form />
+    </div>
   )
 }
 
