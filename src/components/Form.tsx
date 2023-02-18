@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import { AiOutlineEye } from 'react-icons/ai';
+
 
 const Form:React.FC = () => {
   return (
@@ -10,13 +12,15 @@ const Form:React.FC = () => {
         </div>
         <div className='form__body__input'>
           <span>
-            <label htmlFor=""></label>
-            <input type="text" />
+            <label htmlFor="email">Email</label>
+            <p><input type="email" /></p>
           </span>
           <span>
-            <label htmlFor=""></label>
-            <input type="text" />
+            <label htmlFor="password">Password</label>
+            <p><input type="password" /></p>
+            <h6><AiOutlineEye id='eye__icon' /></h6>
           </span>
+          <button type='submit'>Login</button>
         </div>
         <div className='form__body__button'>
 

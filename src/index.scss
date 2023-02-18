@@ -23,8 +23,9 @@ $primaryAlert: #E60A2B;
 .App{
   max-width: 2560px;
   margin: 0 auto;
+  height: 100vhsc ;
 }
-h1, h2, h3, h4 ,p {
+h1, h2, h3, h4 ,p, label, input, button {
   font-family: $fontFamily;
 }
 h1 {
@@ -53,4 +54,35 @@ p {
   font-size: 12px;
   line-height: 19px;
   color: $primaryInnerText;
+}
+label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: -0.3px;
+}
+button {
+  background: #1CC578;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  padding: 20px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: -0.3px;
+  color: white;
+}
+input {
+  width: 100%;
+  border: 1px solid #1A1A1A;
+  border-radius: 8px;
+  padding: 20px;
+  outline: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.3px;
+  color: $primaryBold;
 }
