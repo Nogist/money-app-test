@@ -10,8 +10,10 @@ const Notfification:React.FC = () => {
     <div className='dashboard__alert'>
       <div className='dashboard__alert__body'>
         <div className='dashboard__alert__header'>
-          <ImStopwatch />
-          <p>Coming Soon</p>
+          <span>
+            <ImStopwatch />
+            <p>Coming Soon</p>
+          </span>
         </div>
         <div className='dashboard__alert__section'>
           <span>

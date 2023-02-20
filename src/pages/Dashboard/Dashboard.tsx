@@ -4,6 +4,7 @@ import Navbar from './Navbar'
 import Notfification from './Notification'
 import './dashboard.scss';
 
+
 const Dashboard:React.FC = () => {
   return (
     <div className='dashboard'>

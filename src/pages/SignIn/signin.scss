@@ -66,6 +66,7 @@
   width: 56.94%;
   background: $secondaryBackground;
   padding: 143px 95px;
+  cursor: pointer;
   form {
     width: 100%;
     background: white;
@@ -125,8 +126,6 @@ h6 {
 }
 
 
-
-
 @media only screen and (max-width: 900px) {
   .signin {
     display: flex;
@@ -178,6 +177,12 @@ h6 {
       padding: 20px;
       form {
         padding: 20px;
+        h1 {
+          font-size: 20px;
+        }
+        h2 {
+          font-size: 15px;
+        }
         input {
           padding: 10px;
          

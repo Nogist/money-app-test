@@ -5,9 +5,7 @@ import './dashboard.scss';
 const Navbar:React.FC = () => {
   return (
     <div className='dashboard__navbar'>
-      <div>
-        <img src={logo} alt='logo' />
-      </div>
+      <img src={logo} alt='logo' />
     </div>
   )
 }
