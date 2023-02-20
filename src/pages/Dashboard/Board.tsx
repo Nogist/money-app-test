@@ -9,7 +9,7 @@ interface CompanyData {
 }
 
 const Board: React.FC = () => {
-  const [companyData, setCompanyData] = useState<CompanyData>();
+  const [companyData, setCompanyData] = useState<CompanyData | undefined>();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -43,12 +43,6 @@ const Board: React.FC = () => {
     fetchData();
   }, []);
 
-  if (!companyData) {
-    return <div>Loading...</div>;
-  }
-
-  const { name, ceo, cto } = companyData.company;
-
   return (
     <div className="dashboard__board">
       <div className="dashboard__board__main">
@@ -56,15 +50,27 @@ const Board: React.FC = () => {
           <h3>
             <p>CN</p>
           </h3>
-          <h2>{name}</h2>
+          {companyData ? (
+            <h2>{companyData.company.name}</h2>
+          ) : (
+            <h2>Loading...</h2>
+          )}
         </div>
         <span>
           <p>CEO</p>
-          <h2>{ceo}</h2>
+          {companyData ? (
+            <h2>{companyData.company.ceo}</h2>
+          ) : (
+            <h2>Loading...</h2>
+          )}
         </span>
         <span className="board__names">
           <p>CTO</p>
-          <h2>{cto}</h2>
+          {companyData ? (
+            <h2>{companyData.company.cto}</h2>
+          ) : (
+            <h2>Loading...</h2>
+          )}
         </span>
       </div>
     </div>
