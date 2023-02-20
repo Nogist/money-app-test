@@ -3,9 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { UserContext } from '../Admin/UserContext';
 
-interface Props {}
+interface Props {
+  setIsLogged: (value: boolean) => void;
+}
 
-const Form:React.FC<Props>= () => {
+const Form: React.FC<Props> = ({ setIsLogged }) => {
 
   //Password Visibility
   const [password, setPassword] = useState(false);  
@@ -25,6 +27,7 @@ const Form:React.FC<Props>= () => {
     const Password = (event.target as any).password.value;
 
     if (Email === user.email && Password === user.password) {
+      setIsLogged(true);
       navigate('/dashboard');
     } else {
       alert('Invalid email or password');

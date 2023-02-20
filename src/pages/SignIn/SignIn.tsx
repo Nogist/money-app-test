@@ -1,16 +1,19 @@
-import React from 'react'
+import React from 'react';
 import Form from '../../components/Form';
 import Content from './Content';
 import './signin.scss';
 
-
-const SignIn:React.FC = () => {
-  return (
-    <div className='signin'>
-      <Content />
-      <Form />
-    </div>
-  )
+interface Props {
+  setIsLogged: (value: boolean) => void;
 }
 
-export default SignIn
+const SignIn: React.FC<Props> = ({ setIsLogged }) => {
+  return (
+    <div className="signin">
+      <Content />
+      <Form setIsLogged={setIsLogged} />
+    </div>
+  );
+};
+
+export default SignIn;
